@@ -52,13 +52,27 @@
     <div class="TotalRisk">
       <div class="JEETS"></div>
       <div class="RISK">
-        <div class="OVERRISK"><H1><span class="MainH1">RISK</span><span class="MainH2">0%</span></H1></div>
-        <div><H1>Freeze Auth Disabled</H1></div>
-        <div><H1>Hidden Dev Wallets</H1></div>
-        <div><H1>Mint  Auth Disabled</H1></div>
-        <div><H1>Top 10 Holders</H1></div>
-        <div><H1>Rugpull Check</H1></div>
-        <div><H1>LP Burned</H1></div>
+        <div class="OVERRISK">
+          <H1><span class="MainH1">RISK</span><span class="MainH2">0%</span></H1>
+        </div>
+        <div>
+          <H1>Freeze Auth Disabled <span id="freezeAuth"></span></H1>
+        </div>
+        <div>
+          <H1>Hidden Dev Wallets <span id="hiddenDevWallets"></span></H1>
+        </div>
+        <div>
+          <H1>Mint Auth Disabled <span id="mintAuth"></span></H1>
+        </div>
+        <div>
+          <H1>Top 10 Holders <span id="top10Holders"></span></H1>
+        </div>
+        <div>
+          <H1>Rugpull Check <span id="rugpullCheck"></span></H1>
+        </div>
+        <div>
+          <H1>LP Burned <span id="lpBurned"></span></H1>
+        </div>
       </div>
     </div>
 </div>
@@ -66,7 +80,24 @@
   <div class="Chart">
     <iframe src="https://www.dextools.io/widget-chart/en/solana/pe-light/${tokenAddress}?theme=dark&chartType=Candle&chart&drawingToolbars=false&chartInUsd=true" frameborder="0" width="100%" height="100%" id="dextools-chart"></iframe>
   </div>
-    <div class="ChartInfo"></div>
+  <div class="ChartInfo">
+    <div class="info-item">
+      <span class="info-value" id="marketCap"></span>
+      <span class="info-label">MKT CAP</span>
+    </div>
+    <div class="info-item">
+      <span class="info-value" id="liquidity"></span>
+      <span class="info-label">Liquidity</span>
+    </div>
+    <div class="info-item">
+      <span class="info-value" id="volume"></span>
+      <span class="info-label">24H Volume</span>
+    </div>
+    <div class="info-item">
+      <span class="info-value" id="supply"></span>
+      <span class="info-label">Supply</span>
+    </div>
+  </div>
 </div>
   </section>
   <section class="CA">

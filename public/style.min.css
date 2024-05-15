@@ -213,6 +213,7 @@ margin: 0%;
 
 .OVERRISK {
   margin-top: 20px;
+  margin-bottom: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -228,7 +229,6 @@ margin: 0%;
 }
 
 .MainH1 {
-
   font-family: ClashDisplay;
   font-weight: 700;
   color: #fff;
@@ -236,11 +236,16 @@ margin: 0%;
 }
 
 .MainH2 {
-  
+  margin-left: 7px;
   font-family: ClashDisplay;
   font-weight: 700;
-  color: #B9FD50;
   font-size: 15px;
+  color: #B9FD50; /* Default color */
+}
+
+/* If the percentage is over 15%, change the color to red */
+.MainH2[data-percentage="true"] {
+  color: #FD5050;
 }
 
 .row2 {
@@ -261,6 +266,35 @@ margin: 0%;
   height: 97px;
   background-color: rgba(30, 30, 30, 0.45);
   border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px; /* Add padding on left and right sides */
+  margin-right: 0px; /* Add spacing between items */
+}
+
+.info-item:last-child {
+  margin-right: 0; /* Remove spacing for the last item */
+}
+
+.info-label {
+  font-size: 15px;
+  color: #C2C2C2;
+  font-family: ClashDisplay;
+  font-weight: 400;
+}
+
+.info-value {
+  font-size: 25px;
+  color: #fff;
+  font-family: ClashDisplay;
+  font-weight: 600;
 }
 
 .CA {
@@ -323,6 +357,8 @@ margin-left: 40px;
   height: auto;
 }
 
+
+
 footer {
   color: #fff;
   font-size: 15px;
@@ -333,78 +369,111 @@ footer {
   margin-top: auto;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
+  /* Adjust font sizes */
+  .Tokenname h1 {
+    font-size: 24px;
+  }
+  
+  .Tokenticker h1 {
+    font-size: 18px;
+  }
+  
+  .Tokendis p {
+    font-size: 14px;
+  }
+  
+  .Tokenprice h1 {
+    font-size: 20px;
+  }
+  
+  .info-label {
+    font-size: 10px;
+  }
+  
+  .info-value {
+    font-size: 16px;
+  }
+  
+  /* Adjust layout */
   .INFO {
-    width: 90%;
+    width: 95%;
     height: auto;
     margin: 30px auto;
   }
-
+  
   .alldata {
     flex-direction: column;
     align-items: center;
   }
-
+  
   .containerIMG {
     margin-left: 0;
     margin-top: 30px;
   }
-
+  
   .TokenIMG {
     height: 200px;
     width: 200px;
   }
-
+  
   .Media {
-    width: 200px;
+    width: 100%;
+    justify-content: center;
     margin-top: 20px;
   }
-
+  
   .Maininfo {
     margin-left: 0;
     margin-top: 30px;
     text-align: center;
   }
-
+  
   .Data {
     flex-direction: column;
     margin-top: 20px;
   }
-
+  
   .Trades,
   .TotalRisk {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .JEETS {
-    margin-right: 10px;
     width: 100%;
-    margin-bottom: 10px;
+    margin-left: 0;
+    margin-top: 20px;
   }
-
+  
+  .JEETS,
   .RISK {
     width: 100%;
     margin-right: 0;
-    margin-bottom: 10px;
+    margin-top: 20px;
   }
 
+  .JEETS {
+    width: 100%;
+    margin-right: 4px;
+    margin-top: 20px;
+  }
+  
   .row2 {
     margin-left: 0;
-  }
-
-  .Chart,
-  .ChartInfo {
-    width: 90%;
-    height: 300px;
-    margin: 10px auto;
-  }
-
-  .CA {
     margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
   }
+  
+  .Chart {
+    width: 100%;
+    height: 300px;
+    margin-top: 20px;
+  }
+
+    .ChartInfo {
+      width: 100%;
+      margin-top: 20px;
+    }
+  
+    .CA {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+
 }
