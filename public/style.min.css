@@ -157,6 +157,9 @@ margin: 0%;
   color: #B9FD50;
 }
       
+.PriceMove.negative {
+  color: #FD5050;
+}
 
 .Discord:hover, .Twitter:hover, .Website:hover {
   background-color: rgba(20, 20, 37, 0.95);
