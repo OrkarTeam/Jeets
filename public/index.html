@@ -7,8 +7,8 @@
     <meta name="description" content="">
     <link rel="preload" href="style.min.css" as="style">
     <link rel="stylesheet" href="style.min.css">
-    <script defer src="script.min.js"></script>
-    <script defer src="chart.js"></script>
+    <script defer src="metadata.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <header class="MainP">
@@ -41,7 +41,10 @@
         <p id="tokenDescription">Error</p>
       </div>
       <div class="Tokenprice">
-        <h1> <span class="Price"></span> <span class="PriceMove"></span> </h1>
+        <h1> 
+          <span class="Price"></span>     
+          <span class="PriceMove" id="priceChangePercentage"></span>
+        </h1>
       </div>
 </div>
 </section>
